@@ -67,14 +67,15 @@ Una aplicación web completa para la gestión de tareas (Task Management System)
    ```bash
    git clone https://github.com/tu-usuario/task-tracker-react.git
    cd task-tracker-react
-   ```
+   ```  
 2.**Instalar dependencias**
-   `npm install`
+   `npm install`  
 3. **Iniciar aplicacion**
-   `npm start`
+   `npm start`  
 4. **Abrir el navegador**
-   `http://localhost:3000`
+   `http://localhost:3000`  
 
+  
 Estructura del Proyecto:
 src/
 │
