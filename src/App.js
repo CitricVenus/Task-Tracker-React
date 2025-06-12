@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import TaskList from "./pages/TaskList";
+import AddTask from "./pages/AddTask";
+import EditTask from "./pages/EditTask";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="d-flex flex-column min-vh-100">
+      <Header />
+      <main className="flex-grow-1 bg-light py-4">
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<TaskList />} />
+            <Route path="/add" element={<AddTask />} />
+            <Route path="/edit/:id" element={<EditTask />} />
+          </Routes>
+        </div>
+      </main>
+      <footer className="bg-dark text-white text-center py-2">
+        <div className="container">
+          <small>Task Tracker &copy; {new Date().getFullYear()}</small>
+        </div>
+      </footer>
     </div>
   );
 }

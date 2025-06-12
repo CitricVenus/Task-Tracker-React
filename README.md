@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# 📋 Task Tracker - React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Una aplicación web completa para la gestión de tareas (Task Management System) construida con **React**. Esta app te permite crear, editar, eliminar y marcar tareas como completadas o pendientes, además de navegar entre distintas vistas mediante React Router. Está diseñada con un enfoque modular y responsivo, usando React Hooks, formularios controlados, y almacenamiento persistente con `localStorage`.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Características Principales
 
-### `npm start`
+### ✅ Sistema de Gestión de Tareas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Añadir nuevas tareas con título, descripción y fecha.
+- Editar tareas existentes desde una vista dedicada.
+- Eliminar tareas con confirmación.
+- Marcar tareas como **completadas** o **pendientes**.
+- Vistas separadas:
+  - **Todas las tareas**
+  - **Tareas completadas**
+  - **Tareas pendientes**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🧠 Gestión de Estado
 
-### `npm test`
+- `useState` y `useEffect` para manejar el estado local.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🌐 Navegación con React Router
 
-### `npm run build`
+- `/` → Tablero de tareas (Dashboard)
+- `/add` → Formulario para crear nuevas tareas
+- `/edit/:id` → Vista de detalles y edición de una tarea específica
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🧱 Componentes Reutilizables
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `TaskItem`, `EmptyState`, `TaskForm`, `TaskFilter`, `Header`.
+- Enfoque modular para facilitar el mantenimiento y escalabilidad.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ✍️ Manejo de Formularios y Validación
 
-### `npm run eject`
+- Formularios controlados con `useState`.
+- Validaciones básicas como:
+  - Campos requeridos
+- Mensajes de error amigables.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 💾 Persistencia de Datos
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Las tareas se almacenan en `localStorage`.
+- Persistencia garantizada incluso tras recargar el navegador.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 📱 Diseño Responsivo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Interfaz completamente responsiva con **Bootstrap 5**.
+- Adaptable a escritorio, tablet y móvil.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🛠️ Tecnologías Utilizadas
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [React](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- `localStorage` para persistencia de datos
+- Hooks: `useState`, `useEffect`, `useParams`, `useNavigate`, etc.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🧾 Instalación y Uso
 
-### Analyzing the Bundle Size
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/tu-usuario/task-tracker-react.git
+   cd task-tracker-react
+   2.**Instalar dependencias**
+   `npm install`
+   ```
+2. **Iniciar aplicacion**
+   `npm start`
+3. **Abrir el navegador**
+   `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Estructura del Proyecto:
+src/
+│
+├── components/
+│ ├── EmptySatate.js
+│ ├── Header.js
+│ ├── TaskFilter.js
+│ ├── TaskForm.js
+│ └── TaskItem.js
+│
+├── pages/
+│ ├── AddTask.js
+│ ├── EditTask.js
+│ └── TaskList.js
+│
+├── context/
+│ └── TaskContext.js
+│
+│
+├── App.js
+├── App.css
+├── index.js
+├── index.css
