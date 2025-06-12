@@ -69,13 +69,13 @@ Una aplicación web completa para la gestión de tareas (Task Management System)
    cd task-tracker-react
    ```  
 2.**Instalar dependencias**
-   `npm install`  
+   ```npm install```  
 3. **Iniciar aplicacion**
-   `npm start`  
+   ```npm start```
 4. **Abrir el navegador**
-   `http://localhost:3000`  
+   ```http://localhost:3000```  
 
-  
+ ``` 
 Estructura del Proyecto:
 src/
 │
@@ -99,3 +99,4 @@ src/
 ├── App.css
 ├── index.js
 ├── index.css
+```
